@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">FoodProjectGive</string>
+    <string name="title_activity_login_sign_up">LoginSignUpActivity</string>
+    <string name="subtitle_on_login_sign_up">We visited the food truck @planetveganburgers </string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="login">LogIn</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="your_details">Add yours details to login</string>
+    <string name="email_hint">Your Email</string>
+    <string name="email_or_number_hint">Your Email Or Mobile Number</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password"> Confirm Password</string>
+    <string name="forget_password">Forgot your password?</string>
+    <string name="dont_have_account">Don\'t have an Account?</string>
+    <string name="signup_details">Add your details to sign up</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="user_name">Name</string>
+    <string name="user_email">Email</string>
+    <string name="user_mobile_no">Mobile No.</string>
+    <string name="user_address">Address</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_quotes">Please enter your email to receive a link to create a new password via email</string>
+    <string name="otp_head_quotes">We have sent and OTP to your Mobile</string>
+    <string name="reset_qutoes_number">Please check your mobile number 071******12 continue to reset your password</string>
+    <string name="otp_hint">Enter OTP</string>
+    <string name="next_btn">Next</string>
+    <string name="dont_recive">Don\'t Receive?</string>
+    <string name="clickme">Click Here</string>
+    <string name="findfoodyoulove">Find Food You Love</string>
+    <string name="food_truck_id_quotes">We visited the food truck @planetveganburgers</string>
+    <string name="email_error">Invalid email</string>
+    <string name="password_error">Invalid password</string>
+    <string name="name_error">Invalid name</string>
+    <string name="mobile_error">Invalid Mobile</string>
+    <string name="address_error">Invalid Address</string>
+    <string name="com_error">Password not match</string>
+
+
+</resources>

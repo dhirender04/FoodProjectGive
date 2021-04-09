@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetUpActivity.LogInSignUpActivity"
+    android:background="@drawable/background">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <View
+                    android:layout_marginTop="-20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:background="@color/green_500">
+                </View>
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-100dp"
+                    android:background="@drawable/leaf" />
+                <ImageView
+                    android:layout_marginTop="-20dp"
+                    android:layout_width="220dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/logohome2" />
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text="@string/subtitle_on_login_sign_up"
+                    android:textColor="@color/white"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginTop="30dp"
+                    app:cornerRadius="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/btn_login"
+                    android:text="@string/login"
+                    android:onClick="btnLogin"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    app:cornerRadius="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/btn_signup"
+                    android:text="@string/sign_up"
+                    android:onClick="btn_signup"/>
+
+        </LinearLayout>
+
+
+
+</FrameLayout>
