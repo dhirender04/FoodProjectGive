@@ -57,48 +57,45 @@ public class LogInActivity extends AppCompatActivity {
         AwesomeValidation awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         awesomeValidation.addValidation(LogInActivity.this,R.id.login_mail,"\\w+@\\w+.\\w+",R.string.email_error);
         awesomeValidation.addValidation(LogInActivity.this,R.id.password_login,"[a-zA-Z\\s]+",R.string.password_error);
-        if (awesomeValidation.validate()){
-            movieLogInActivityToOtpActivity();
-        }
 
 
-//        String _login_mail = login_mail.getText().toString();
-//        String _password_login = password_login.getText().toString();
-//        Retrofit retrofit = RetrofitInstance.get();
-//        HttpsInterface httpsInterface = retrofit.create(HttpsInterface.class);
-//        Call<LogInModel> call = httpsInterface.logInUser(_login_mail,_password_login);
-//        call.enqueue(new Callback<LogInModel>() {
-//            @Override
-//            public void onResponse(Call<LogInModel> call, Response<LogInModel> response) {
-//                LogInModel logInModel = response.body();
-//
-//                    if (response.isSuccessful()==false){
-//                        Log.v(ERROR_RETROFIT,"Response Error when fetching data from server");
-//                        Toast.makeText(LogInActivity.this, "pooooos", Toast.LENGTH_SHORT).show();
-//                    }
-//                    if (logInModel.getStatus()==false){
-//                        Log.v(ERROR_RETROFIT,"LogIn Model Error when fetching data from server");
-//                        Toast.makeText(LogInActivity.this, "pooooos", Toast.LENGTH_SHORT).show();
-//                    }
-//
-//                if (awesomeValidation.validate()){
-//                    String token = logInModel.getUserModel().getToken();
-//                    editor.putString("token", token);
-//                    int id = logInModel.getUserModel().getId();
-//                    editor.putInt("id", id);
-//                    editor.apply();
-//                    movieLogInActivityToOtpActivity();
-//                }else{
-//                    Toast.makeText(LogInActivity.this, "pooooos", Toast.LENGTH_SHORT).show();
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<LogInModel> call, Throwable t) {
-//                Log.v(ERROR_RETROFIT,"failure on Login ");
-//            }
-//        });
+        String _login_mail = login_mail.getText().toString();
+        String _password_login = password_login.getText().toString();
+        Retrofit retrofit = RetrofitInstance.get();
+        HttpsInterface httpsInterface = retrofit.create(HttpsInterface.class);
+        Call<LogInModel> call = httpsInterface.logInUser(_login_mail,_password_login);
+        call.enqueue(new Callback<LogInModel>() {
+            @Override
+            public void onResponse(Call<LogInModel> call, Response<LogInModel> response) {
+                LogInModel logInModel = response.body();
+
+                    if (response.isSuccessful()==false){
+                        Log.v(ERROR_RETROFIT,"Response Error when fetching data from server");
+                        Toast.makeText(LogInActivity.this, "pooooos", Toast.LENGTH_SHORT).show();
+                    }
+                    if (logInModel.getStatus()==false){
+                        Log.v(ERROR_RETROFIT,"LogIn Model Error when fetching data from server");
+                        Toast.makeText(LogInActivity.this, "pooooos", Toast.LENGTH_SHORT).show();
+                    }
+
+                if (awesomeValidation.validate()){
+                    String token = logInModel.getUserModel().getToken();
+                    editor.putString("token", token);
+                    int id = logInModel.getUserModel().getId();
+                    editor.putInt("id", id);
+                    editor.apply();
+                    movieLogInActivityToOtpActivity();
+                }else{
+                    Toast.makeText(LogInActivity.this, "pooooos", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<LogInModel> call, Throwable t) {
+                Log.v(ERROR_RETROFIT,"failure on Login ");
+            }
+        });
 
 
     }
